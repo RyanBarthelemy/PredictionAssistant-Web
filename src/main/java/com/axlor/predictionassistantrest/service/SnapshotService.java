@@ -51,7 +51,7 @@ public class SnapshotService {
     }
 
     private SnapshotMini createSnapshotMini(Integer hashId, Long timestamp) {
-        String href = "/snapshots/" + hashId;
+        String href = "/api/snapshots/" + hashId;
 
         String timestampToDisplay = new SimpleDateFormat("M/d/yyyy hh:mm aa").format(new Date(timestamp));
         return new SnapshotMini(hashId, timestampToDisplay, href);

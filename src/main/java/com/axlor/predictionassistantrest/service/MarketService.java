@@ -52,7 +52,7 @@ public class MarketService {
             MarketMini marketMini = new MarketMini(
                     current.getMarkets().get(i).getName(),
                     current.getMarkets().get(i).getId(),
-                    "/markets/" + current.getMarkets().get(i).getId(),
+                    "/api/markets/" + current.getMarkets().get(i).getId(),
                     contractMinis
             );
             marketMinis.add(marketMini);
@@ -86,9 +86,9 @@ public class MarketService {
      */
     public Market getLatestMarketInfo(int marketId) throws NoSnapshotsInDatabaseException, MarketNotFoundException {
         List<Market> latestMarkets = snapshotService.getLatestSnapshot().getMarkets();
-        for (int i=0; i<latestMarkets.size(); i++){
-            if(latestMarkets.get(i).getId() == marketId ){
-                return latestMarkets.get(i);
+        for (Market latestMarket : latestMarkets) {
+            if (latestMarket.getId() == marketId) {
+                return latestMarket;
             }
         }
         throw new MarketNotFoundException("No Market with PredictIt marketId: '" + marketId + "' was found in the latest Snapshot data. Market may be closed, check url of Market.");
