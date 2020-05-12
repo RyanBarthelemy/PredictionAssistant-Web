@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/gtvg.css" data-th-href="@{/css/gtvg.css}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Prediction Assistant</title>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-2">Snapshots</h1>
+            <h3 class="display-9" th:text="${snapshots.size()} + ' snapshots and counting'"></h3>
+            <br>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Snapshot Id</th>
+            <th>Timestamp</th>
+            <th>Link to Snapshot</th>
+            <th>JSON of Raw Data</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="snapshot : ${snapshots}">
+            <td th:text="${snapshot.hashID}"></td>
+            <td th:text="${snapshot.timestampDisplay}"></td>
+            <td><a th:href="'/snapshots/' + @{${snapshot.hashID}}" th:text="'Markets Available'"/></td>
+            <td><a th:href="'/api/snapshots/' + @{${snapshot.hashID}}" th:text="'As JSON'"/></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+</div>
+</body>
+</html>

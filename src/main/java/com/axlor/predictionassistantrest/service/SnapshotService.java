@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * Handles requesting data from various repositories and organizing that data into a form the controllers require.
@@ -70,8 +71,30 @@ public class SnapshotService {
         if(snapshotRepository.count()==0){
             throw new NoSnapshotsInDatabaseException();
         }
-        return snapshotRepository.findById(hashId)
-                .orElseThrow(() -> new SnapshotNotFoundException(hashId));
+
+        /*
+        For whatever reason snapshotRepository.findById(hashId) is getting wayyy too many Markets in its List<Market>
+        Many many duplicate markets. This code culls the repeats at some cost.
+        TODO: Write a custom @Query in the repository and see if it works
+        Note: ./snapshots/latest works correctly, but /snapshots/{hashId} that retrieves the exact same market will have tons of duplicate Markets in list...
+        I think a custom @Query should solve this issue more elegantly.
+        I don't think it is an ORM issue since other things are working correctly, I think the superclass findById just sucks for this somehow.
+         */
+        if(snapshotRepository.findById(hashId).isPresent()){
+            Snapshot snapshot = snapshotRepository.findById(hashId).get();
+            System.out.println("Number of markets = " + snapshot.getMarkets().size());
+            //for some reason this isn't working correctly.
+            for (int i=0; i< snapshot.getMarkets().size()-1; i++){
+                if(snapshot.getMarkets().get(i).getMarketUniqueID().equals(snapshot.getMarkets().get(i + 1).getMarketUniqueID())){
+                    snapshot.getMarkets().remove(i);
+                    i--;
+                }
+            }
+            System.out.println("number of markets after cull = " + snapshot.getMarkets().size());
+            return snapshot;
+        }
+        throw new SnapshotNotFoundException(hashId);
+
     }
 
     /**

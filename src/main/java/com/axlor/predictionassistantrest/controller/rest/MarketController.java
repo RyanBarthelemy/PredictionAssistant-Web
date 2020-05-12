@@ -1,4 +1,4 @@
-package com.axlor.predictionassistantrest.controller;
+package com.axlor.predictionassistantrest.controller.rest;
 
 import com.axlor.predictionassistantrest.exception.MarketNotFoundException;
 import com.axlor.predictionassistantrest.exception.NoSnapshotsInDatabaseException;
