@@ -23,7 +23,7 @@ import java.util.List;
  */
 @RequestMapping("/api")
 @RestController
-public class SnapshotController {
+public class SnapshotRestController {
 
     /**
      * The SnapshotService object handled and injected by Spring.

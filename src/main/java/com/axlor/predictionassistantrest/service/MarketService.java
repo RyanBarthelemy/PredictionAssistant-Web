@@ -44,9 +44,7 @@ public class MarketService {
             for (int j = 0; j < current.getMarkets().get(i).getContracts().size(); j++) {
                 ContractMini contractMini = new ContractMini(
                         current.getMarkets().get(i).getContracts().get(j).getName(),
-                        current.getMarkets().get(i).getContracts().get(j).getId(),
-                        "/contracts/" + current.getMarkets().get(i).getContracts().get(j).getId()
-                );
+                        current.getMarkets().get(i).getContracts().get(j).getId());
                 contractMinis.add(contractMini);
             }//contractMini list creation loop
             MarketMini marketMini = new MarketMini(

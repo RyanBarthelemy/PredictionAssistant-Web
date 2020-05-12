@@ -16,7 +16,6 @@ public class IndexController {
 
     @RequestMapping("/")
     public String getHomepage(Model model){
-
         try {
             model.addAttribute("snapshots", snapshotService.getAllSnapshots_mini()) ;
         } catch (SnapshotCountMismatchException | NoSnapshotsInDatabaseException e) {

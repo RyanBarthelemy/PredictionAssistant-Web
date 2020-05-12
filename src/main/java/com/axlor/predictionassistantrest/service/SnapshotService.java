@@ -82,7 +82,6 @@ public class SnapshotService {
          */
         if(snapshotRepository.findById(hashId).isPresent()){
             Snapshot snapshot = snapshotRepository.findById(hashId).get();
-            System.out.println("Number of markets = " + snapshot.getMarkets().size());
             //for some reason this isn't working correctly.
             for (int i=0; i< snapshot.getMarkets().size()-1; i++){
                 if(snapshot.getMarkets().get(i).getMarketUniqueID().equals(snapshot.getMarkets().get(i + 1).getMarketUniqueID())){
@@ -90,7 +89,6 @@ public class SnapshotService {
                     i--;
                 }
             }
-            System.out.println("number of markets after cull = " + snapshot.getMarkets().size());
             return snapshot;
         }
         throw new SnapshotNotFoundException(hashId);

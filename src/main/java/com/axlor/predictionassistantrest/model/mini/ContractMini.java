@@ -3,12 +3,10 @@ package com.axlor.predictionassistantrest.model.mini;
 public class ContractMini {
     private String name;
     private int id;
-    private String href;
 
-    public ContractMini(String name, int id, String href) {
+    public ContractMini(String name, int id) {
         this.name = name;
         this.id = id;
-        this.href = href;
     }
 
     public String getName() {
@@ -27,11 +25,4 @@ public class ContractMini {
         this.id = id;
     }
 
-    public String getHref() {
-        return href;
-    }
-
-    public void setHref(String href) {
-        this.href = href;
-    }
 }

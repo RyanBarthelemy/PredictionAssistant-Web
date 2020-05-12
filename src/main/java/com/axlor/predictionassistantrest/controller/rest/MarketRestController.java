@@ -21,7 +21,7 @@ import java.util.List;
  */
 @RequestMapping("/api")
 @RestController
-public class MarketController {
+public class MarketRestController {
 
     /**
      * The MarketService object that is handled and injected by Spring.
