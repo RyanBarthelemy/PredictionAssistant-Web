@@ -11,7 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.websocket.server.PathParam;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -26,7 +25,7 @@ public class SnapshotWebController {
         try {
             model.addAttribute("snapshots", snapshotService.getAllSnapshots_mini()) ;
         } catch (SnapshotCountMismatchException | NoSnapshotsInDatabaseException e) {
-            return "errorPage";
+            return "error/snapshotNotFound404Page";
         }
         return "snapshots";
     }
@@ -45,11 +44,9 @@ public class SnapshotWebController {
             return "snapshotInfo";
 
         }catch(NumberFormatException nfe){
-            return "invalidSnapshotIdError";
+            return "error/invalidSnapshotIdError";
         } catch (NoSnapshotsInDatabaseException | SnapshotNotFoundException e) {
-            return "snapshotNotFound404Page";
+            return "error/snapshotNotFound404Page";
         }
-
-
     }
 }

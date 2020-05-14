@@ -33,9 +33,9 @@ public class MarketWebController {
 
             return "marketInfo";
         }catch(NumberFormatException nfe){
-            return "invalidMarketIdError";
+            return "error/invalidMarketIdError";
         } catch (NoSnapshotsInDatabaseException | MarketNotFoundException e) {
-           return "marketNotFound404Page";
+           return "error/marketNotFound404Page";
         }
     }
 
@@ -55,7 +55,7 @@ public class MarketWebController {
                 }
             }
             if(contractHistoryList==null || contractHistoryList.isEmpty()){
-                return "marketNotFound404Page";
+                return "error/marketNotFound404Page";
             }
 
             model.addAttribute("contractHistoryList", contractHistoryList);
@@ -67,9 +67,9 @@ public class MarketWebController {
             return "contractHistory";
 
         }catch(NumberFormatException nfe){
-            return "invalidMarketIdError";
+            return "error/invalidMarketIdError";
         } catch (MarketNotFoundException e) {
-            return "marketNotFound404Page";
+            return "error/marketNotFound404Page";
         }
     }
 
