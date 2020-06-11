@@ -1,10 +1,10 @@
-package com.axlor.predictionassistantrest.controller.rest;
+package com.axlor.predictionassistantwebapp.controller.rest;
 
-import com.axlor.predictionassistantrest.exception.MarketNotFoundException;
-import com.axlor.predictionassistantrest.exception.NoSnapshotsInDatabaseException;
-import com.axlor.predictionassistantrest.model.Market;
-import com.axlor.predictionassistantrest.model.mini.MarketMini;
-import com.axlor.predictionassistantrest.service.MarketService;
+import com.axlor.predictionassistantwebapp.exception.MarketNotFoundException;
+import com.axlor.predictionassistantwebapp.exception.NoSnapshotsInDatabaseException;
+import com.axlor.predictionassistantwebapp.model.Market;
+import com.axlor.predictionassistantwebapp.model.mini.MarketMini;
+import com.axlor.predictionassistantwebapp.service.MarketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

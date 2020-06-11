@@ -1,6 +1,5 @@
-package com.axlor.predictionassistantrest.exception;
+package com.axlor.predictionassistantwebapp.exception;
 
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

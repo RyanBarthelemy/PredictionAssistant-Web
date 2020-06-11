@@ -1,4 +1,4 @@
-package com.axlor.predictionassistantrest.exception;
+package com.axlor.predictionassistantwebapp.exception;
 
 public class SnapshotCountMismatchException extends Exception {
     public SnapshotCountMismatchException(){

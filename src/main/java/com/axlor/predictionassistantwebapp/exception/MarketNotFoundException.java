@@ -1,4 +1,4 @@
-package com.axlor.predictionassistantrest.exception;
+package com.axlor.predictionassistantwebapp.exception;
 
 public class MarketNotFoundException extends Exception {
     public MarketNotFoundException(int nonUniqueId){

@@ -1,11 +1,11 @@
-package com.axlor.predictionassistantrest.service;
+package com.axlor.predictionassistantwebapp.service;
 
-import com.axlor.predictionassistantrest.exception.NoSnapshotsInDatabaseException;
-import com.axlor.predictionassistantrest.exception.SnapshotCountMismatchException;
-import com.axlor.predictionassistantrest.exception.SnapshotNotFoundException;
-import com.axlor.predictionassistantrest.model.Snapshot;
-import com.axlor.predictionassistantrest.model.mini.SnapshotMini;
-import com.axlor.predictionassistantrest.repository.SnapshotRepository;
+import com.axlor.predictionassistantwebapp.exception.NoSnapshotsInDatabaseException;
+import com.axlor.predictionassistantwebapp.exception.SnapshotCountMismatchException;
+import com.axlor.predictionassistantwebapp.exception.SnapshotNotFoundException;
+import com.axlor.predictionassistantwebapp.model.Snapshot;
+import com.axlor.predictionassistantwebapp.model.mini.SnapshotMini;
+import com.axlor.predictionassistantwebapp.repository.SnapshotRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 /**
  * Handles requesting data from various repositories and organizing that data into a form the controllers require.

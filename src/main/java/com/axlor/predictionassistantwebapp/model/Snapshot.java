@@ -1,4 +1,4 @@
-package com.axlor.predictionassistantrest.model;
+package com.axlor.predictionassistantwebapp.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

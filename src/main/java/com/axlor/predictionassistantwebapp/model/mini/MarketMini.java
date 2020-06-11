@@ -1,4 +1,4 @@
-package com.axlor.predictionassistantrest.model.mini;
+package com.axlor.predictionassistantwebapp.model.mini;
 
 import java.util.List;
 

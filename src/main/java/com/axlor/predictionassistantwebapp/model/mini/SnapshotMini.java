@@ -1,4 +1,4 @@
-package com.axlor.predictionassistantrest.model.mini;
+package com.axlor.predictionassistantwebapp.model.mini;
 
 /*
     This class represents a Snapshot and how to find in using this application's REST API.

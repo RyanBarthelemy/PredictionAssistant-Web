@@ -1,12 +1,12 @@
-package com.axlor.predictionassistantrest.service;
+package com.axlor.predictionassistantwebapp.service;
 
-import com.axlor.predictionassistantrest.exception.MarketNotFoundException;
-import com.axlor.predictionassistantrest.exception.NoSnapshotsInDatabaseException;
-import com.axlor.predictionassistantrest.model.Market;
-import com.axlor.predictionassistantrest.model.Snapshot;
-import com.axlor.predictionassistantrest.model.mini.ContractMini;
-import com.axlor.predictionassistantrest.model.mini.MarketMini;
-import com.axlor.predictionassistantrest.repository.MarketRepository;
+import com.axlor.predictionassistantwebapp.exception.MarketNotFoundException;
+import com.axlor.predictionassistantwebapp.exception.NoSnapshotsInDatabaseException;
+import com.axlor.predictionassistantwebapp.model.Market;
+import com.axlor.predictionassistantwebapp.model.Snapshot;
+import com.axlor.predictionassistantwebapp.model.mini.ContractMini;
+import com.axlor.predictionassistantwebapp.model.mini.MarketMini;
+import com.axlor.predictionassistantwebapp.repository.MarketRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

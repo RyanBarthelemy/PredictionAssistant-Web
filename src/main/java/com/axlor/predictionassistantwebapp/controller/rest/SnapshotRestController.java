@@ -1,11 +1,11 @@
-package com.axlor.predictionassistantrest.controller.rest;
+package com.axlor.predictionassistantwebapp.controller.rest;
 
-import com.axlor.predictionassistantrest.exception.NoSnapshotsInDatabaseException;
-import com.axlor.predictionassistantrest.exception.SnapshotCountMismatchException;
-import com.axlor.predictionassistantrest.exception.SnapshotNotFoundException;
-import com.axlor.predictionassistantrest.model.Snapshot;
-import com.axlor.predictionassistantrest.model.mini.SnapshotMini;
-import com.axlor.predictionassistantrest.service.SnapshotService;
+import com.axlor.predictionassistantwebapp.exception.NoSnapshotsInDatabaseException;
+import com.axlor.predictionassistantwebapp.exception.SnapshotCountMismatchException;
+import com.axlor.predictionassistantwebapp.exception.SnapshotNotFoundException;
+import com.axlor.predictionassistantwebapp.model.Snapshot;
+import com.axlor.predictionassistantwebapp.model.mini.SnapshotMini;
+import com.axlor.predictionassistantwebapp.service.SnapshotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

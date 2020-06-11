@@ -1,4 +1,4 @@
-package com.axlor.predictionassistantrest;
+package com.axlor.predictionassistantwebapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

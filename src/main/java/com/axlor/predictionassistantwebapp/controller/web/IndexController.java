@@ -1,8 +1,8 @@
-package com.axlor.predictionassistantrest.controller.web;
+package com.axlor.predictionassistantwebapp.controller.web;
 
-import com.axlor.predictionassistantrest.exception.NoSnapshotsInDatabaseException;
-import com.axlor.predictionassistantrest.exception.SnapshotCountMismatchException;
-import com.axlor.predictionassistantrest.service.SnapshotService;
+import com.axlor.predictionassistantwebapp.exception.NoSnapshotsInDatabaseException;
+import com.axlor.predictionassistantwebapp.exception.SnapshotCountMismatchException;
+import com.axlor.predictionassistantwebapp.service.SnapshotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
